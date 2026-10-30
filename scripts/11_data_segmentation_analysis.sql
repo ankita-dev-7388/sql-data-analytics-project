@@ -22,8 +22,8 @@ WITH product_segments AS (
 		cost,
 		CASE      
 			WHEN cost < 100 THEN 'Below 100'
-			WHEN cost BETWEEN 100 AND 500 THEN '100 - 500'
-			WHEN cost BETWEEN 500 AND 1000 THEN '500 - 1000'
+			WHEN cost BETWEEN 100 AND 499 THEN '100 - 500'
+			WHEN cost BETWEEN 500 AND 999 THEN '500 - 1000'
 			ELSE 'Above 1000'
 		END AS cost_range
 	FROM gold.dim_products
