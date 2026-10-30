@@ -42,7 +42,7 @@ WITH base_query AS (
 		f.quantity,
 		c.customer_key,
 		c.customer_number,
-		CONCAT('c.first_name', ' ', 'c.last_name') AS customer_name,      
+		CONCAT(c.first_name, ' ', c.last_name) AS customer_name,      
 		DATEDIFF(year, c.birthdate, GETDATE()) age                        
 	FROM gold.fact_sales f
 	LEFT JOIN gold.dim_customers c
