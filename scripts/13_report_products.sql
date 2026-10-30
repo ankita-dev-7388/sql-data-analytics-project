@@ -90,8 +90,8 @@ SELECT
 	last_sale_date,
 	DATEDIFF(month, last_sale_date,GETDATE()) AS recency_in_months,
 	CASE
-		WHEN total_sales > 5000 THEN 'High-Performer'
-		WHEN total_sales >= 10000 THEN 'Mid-Range'
+		WHEN total_sales > 10000 THEN 'High-Performer'
+		WHEN total_sales >= 5000 THEN 'Mid-Range'
 		ELSE 'Low-Performer'
 	END AS product_segment,
 	total_orders,
